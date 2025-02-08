@@ -1,0 +1,152 @@
+body {
+    box-sizing: border-box;
+}
+
+.content-menulis, .content-utama{
+    background-color: blueviolet;
+}
+.content-utama {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100svh;
+}
+
+.utama {
+    margin: auto;
+    text-align: center;
+}
+.utama > .header {
+   color: aliceblue;
+   text-transform: uppercase;
+   font-size: x-large;
+}
+
+.utama > p {
+    color: whitesmoke;
+    letter-spacing: 1px;
+    font-size: large;
+    margin: 25px 0px;
+}
+
+.utama > button, .utama > .hobi-hobi > a > button {
+    border: none;
+    color: indigo;
+    font-size: medium;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: coral;
+    cursor: pointer;
+}
+
+.utama > .hobi-hobi > a > button:hover{
+    background-color: whitesmoke;
+
+}
+
+.content-menulis {
+ display: grid;
+ grid-template-columns: auto auto auto;
+ grid-template-rows: auto auto auto;
+ gap: 5px;
+ width: 100%;
+ height: 100svh;
+}
+
+
+
+@media screen and (min-device-width: 481px) and (max-device-width: 768px) { 
+   .content-menulis {
+    grid-template-columns: auto auto;
+   }
+}
+
+@media only screen and (max-device-width: 480px) {
+   .content-menulis {
+    grid-template-columns: auto;
+   }
+}
+
+.content-menulis > .active{
+    display: flex;
+    text-align: center;
+    font-size: xx-large;
+    text-transform: uppercase;
+}
+
+.content-menulis > .active:nth-child(even){
+    background-color: #dcff50;
+    color: rgb(201, 205, 92);
+}
+
+.content-menulis > .active:nth-child(odd){
+    background-color: #ffca50;
+    color: rgb(205, 149, 92);
+}
+
+.content-menulis > .menulis > .header{
+    display: none;
+}
+
+.content-menulis > .active > .header a{
+    text-decoration: none;
+    color: inherit;
+}
+.content-menulis > .active > .header{
+    display: block;
+    cursor: pointer;
+    margin: auto;
+    font-weight: bolder;
+    padding: 20px 20px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.menulis-isi{
+    display: grid;
+    height: 100svh;
+    grid-template-columns: auto;
+    justify-content: center; 
+    padding: 10px 25%;
+    text-align: justify;
+    background-color: white;
+}
+
+.menulis-isi > .isi > h2{
+color: indigo;
+text-align: center;
+text-transform: capitalize;
+
+
+}
+.menulis-isi > .isi > p{
+color: rgb(58, 58, 58);
+font-size: 18px;
+font-family: 'Times New Roman', Times, serif;
+word-spacing: 1px;
+}
+
+
+
+@media screen and (min-device-width: 481px) and (max-device-width: 768px) { 
+    .menulis-isi{
+        padding: 10px 10%;
+        
+       }
+
+       .menulis-isi > .isi > p{
+      
+        font-size: 16px;
+        }
+ }
+
+@media only screen and (max-device-width: 480px) {
+   .menulis-isi{
+    padding: 5px 0px;
+ 
+   }
+
+   .menulis-isi > .isi > p{
+  
+    font-size: 15px;
+    }
+ }
